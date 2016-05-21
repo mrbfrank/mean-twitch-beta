@@ -54,4 +54,8 @@ module.exports = function (app) {
   // Setting the paypal oauth routes
   app.route('/api/auth/paypal').get(users.oauthCall('paypal'));
   app.route('/api/auth/paypal/callback').get(users.oauthCallback('paypal'));
+
+  // Setting the twitch oauth routes
+  app.route('/api/auth/twitch').get(users.oauthCall('twitch'));
+  app.route('/api/auth/twitch/callback').get(users.oauthCallback('twitch'));
 };

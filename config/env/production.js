@@ -68,6 +68,11 @@ module.exports = {
     callbackURL: '/api/auth/paypal/callback',
     sandbox: false
   },
+  twitch: {
+    clientID: process.env.TWITCH_ID || 'CLIENT_ID',
+    clientSecret: process.env.TWITCH_SECRET || 'CLIENT_SECRET',
+    callbackURL: '/api/auth/twitch/callback'
+  },
   mailer: {
     from: process.env.MAILER_FROM || 'MAILER_FROM',
     options: {
